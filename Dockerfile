@@ -3,7 +3,8 @@ FROM multiarch/crossbuild
 ENV CARGO_HOME=/usr/local/rust
 ENV RUSTUP_HOME=/usr/local/rustup
 
-RUN apt-get install libssl-dev -y \
+RUN apt-get update -y \
+  && apt-get install libssl-dev -y \
   &&curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
   && /usr/local/rust/bin/rustup install stable \
   && /usr/local/rust/bin/rustup default stable \
