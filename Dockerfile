@@ -9,8 +9,8 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
   && /usr/local/rust/bin/rustup target install x86_64-apple-darwin \
   && /usr/local/rust/bin/rustup target install x86_64-pc-windows-gnu \
   && --rm debian:jessie-slim grep '^deb ' /etc/apt/sources.list  \
-  && deb http://deb.debian.org/debian jessie main
-  && deb http://security.debian.org/debian-security jessie/updates main
+  && deb http://deb.debian.org/debian jessie main \
+  && deb http://security.debian.org/debian-security jessie/updates main \
   && apt-get update -y \
   && apt-get install openssl -y \
   && apt-get install libssl-dev -y
