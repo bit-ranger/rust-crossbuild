@@ -3,6 +3,9 @@ FROM multiarch/crossbuild
 ENV CARGO_HOME=/usr/local/rust
 ENV RUSTUP_HOME=/usr/local/rustup
 
+
+RUN sed -i '/jessie-updates/d' /etc/apt/sources.list
+
 RUN apt-get update -y \
   && apt-get install openssl -y \
   && apt-get install libssl-dev -y \
