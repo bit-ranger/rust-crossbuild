@@ -6,7 +6,7 @@ ADD sources.list /etc/apt/
 
 RUN apt-get update -y \
   && apt-get install openssl -y \
-  && apt-get install libssl-dev -y
+  && apt-get install libssl-dev -y \
   && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y \
   && /usr/local/rust/bin/rustup install stable \
   && /usr/local/rust/bin/rustup default stable \
