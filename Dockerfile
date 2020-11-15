@@ -2,7 +2,6 @@ FROM multiarch/crossbuild
 
 ENV CARGO_HOME=/usr/local/rust
 ENV RUSTUP_HOME=/usr/local/rustup
-ADD sources.list /etc/apt/
 
 RUN apt-get update -y \
   && apt-get install openssl -y \
