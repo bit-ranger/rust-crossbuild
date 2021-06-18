@@ -71,7 +71,7 @@ RUN set -eux \
 RUN set -eux \
     && ln -s "/usr/bin/g++" "/usr/bin/musl-g++" \
     # Create appropriate directories for current user
-    && mkdir -p /root/libs /root/src \
+    && mkdir -p /root/libs /root/workdir \
     && true
 
 # Set up our path with all our binary directories, including those for the
@@ -192,6 +192,6 @@ RUN set -eux \
 
 ENV PATH $PATH:/usr/local/osxcross/target/bin
 
-WORKDIR /root/src
+WORKDIR /root/workdir
 
 CMD ["bash"]
