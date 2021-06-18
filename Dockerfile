@@ -192,6 +192,6 @@ RUN set -eux \
 
 ENV PATH $PATH:/usr/local/osxcross/target/bin
 
-WORKDIR /root
+WORKDIR /root/src
 
 CMD ["bash"]
