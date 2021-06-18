@@ -1,6 +1,6 @@
 FROM multiarch/crossbuild
 
-COPY macos_linker.sh /usr/local/macos/macos_linker.sh
+COPY ./macos_linker.sh /usr/local/macos/macos_linker.sh
 
 ENV CARGO_HOME=/usr/local/cargo
 ENV RUSTUP_HOME=/usr/local/rustup
